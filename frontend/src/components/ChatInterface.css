@@ -1,0 +1,287 @@
+/* frontend/src/components/ChatInterface.css */
+/* General container styling */
+.chat-container {
+  width: 90vw;
+  max-width: 600px;
+  margin: 40px auto;
+  min-height: 75vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f3e7fa 0%, #e3f0ff 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 32px rgba(122, 85, 255, 0.10), 0 2px 4px rgba(160, 108, 255, 0.07);
+  padding: 2vw 0;
+  transition: box-shadow 0.3s;
+  /* Safari compatibility for backdrop effects */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Chat paper for main content */
+.chat-paper {
+  padding: 32px 24px 24px 24px;
+  min-height: 540px;
+  border: none;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 4px 24px rgba(160, 108, 255, 0.09);
+  /* Enhanced Safari support */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* Fallback for older browsers */
+  background-color: rgba(255,255,255,0.95);
+}
+
+/* Header styling */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #ede7f6;
+}
+
+.chat-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #6a1b9a;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Safari text rendering optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logout-button {
+  background: linear-gradient(90deg, #ef5350 60%, #ff867c 100%);
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(239, 83, 80, 0.08);
+  transition: background 0.2s, transform 0.15s;
+  /* Safari button styling */
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.logout-button:hover {
+  background: linear-gradient(90deg, #d32f2f 60%, #ff867c 100%);
+  transform: scale(1.04);
+  /* Safari transform optimization */
+  -webkit-transform: scale(1.04);
+}
+
+/* Messages area */
+.messages-container {
+  flex-grow: 1;
+  margin-bottom: 22px;
+  overflow-y: auto;
+  padding: 14px 10px 10px 10px;
+  border: none;
+  border-radius: 16px;
+  background: #f8f6fc;
+  box-shadow: 0 1px 6px rgba(160, 108, 255, 0.04);
+  scroll-behavior: smooth;
+  /* Safari scrolling optimization */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Message bubbles */
+.message-bubble {
+  padding: 14px 18px;
+  border-radius: 20px;
+  max-width: 78%;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(160, 108, 255, 0.06);
+  word-break: break-word;
+  line-height: 1.5;
+  /* Safari compatibility */
+  -webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+  -webkit-font-smoothing: antialiased;
+}
+
+.message-bubble:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(160, 108, 255, 0.10);
+  /* Safari transform */
+  -webkit-transform: translateY(-2px) scale(1.02);
+}
+
+.user-bubble {
+  background: linear-gradient(90deg, #7b1fa2 80%, #b388ff 100%);
+  color: #fff;
+  align-self: flex-end;
+  text-align: right;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  /* Safari gradient fallback */
+  background-color: #7b1fa2;
+}
+
+.bot-bubble {
+  background: linear-gradient(90deg, #f3e5f5 80%, #e1bee7 100%);
+  color: #4a148c;
+  border: 1px solid #e1bee7;
+  align-self: flex-start;
+  text-align: left;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* Safari gradient fallback */
+  background-color: #f3e5f5;
+}
+
+/* Input area */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #b39ddb;
+  font-size: 1.05rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #f9f6fd;
+  box-shadow: 0 1px 6px rgba(160, 108, 255, 0.03);
+  /* Safari input styling */
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.chat-input:focus {
+  border-color: #7b1fa2;
+  box-shadow: 0 0 0 2px #ede7f6;
+  /* Safari focus ring removal */
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.send-button {
+  padding: 12px 22px;
+  background: linear-gradient(90deg, #7b1fa2 60%, #b388ff 100%);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(123, 31, 162, 0.10);
+  /* Safari button optimization */
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: background 0.3s, -webkit-transform 0.15s;
+  /* Gradient fallback */
+  background-color: #7b1fa2;
+}
+
+.send-button:hover {
+  background: linear-gradient(90deg, #6a1b9a 60%, #9575cd 100%);
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  /* Fallback color */
+  background-color: #6a1b9a;
+}
+
+/* Safari-specific fixes */
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  .chat-container,
+  .chat-paper {
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .chat-container {
+    width: 98vw;
+    min-height: 90vh;
+    padding: 0;
+  }
+  
+  .chat-paper {
+    padding: 16px 6px 12px 6px;
+    min-height: 400px;
+  }
+  
+  .chat-title {
+    font-size: 1.15rem;
+  }
+  
+  .message-bubble {
+    font-size: 0.98rem;
+    padding: 11px 12px;
+  }
+  
+  /* iOS Safari specific fixes */
+  .messages-container {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .chat-input {
+    font-size: 16px; /* Prevents zoom on iOS Safari */
+  }
+}
+
+/* Additional Safari compatibility */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .chat-input,
+  .send-button,
+  .logout-button {
+    -webkit-appearance: none;
+  }
+}
+
+/* Dark mode support for Safari */
+@media (prefers-color-scheme: dark) {
+  .chat-container {
+    background: linear-gradient(135deg, #2d1b3d 0%, #1a2332 100%);
+  }
+  
+  .chat-paper {
+    background: rgba(40, 40, 40, 0.97);
+    color: #ffffff;
+  }
+  
+  .messages-container {
+    background: #2a2a2a;
+  }
+  
+  .chat-input {
+    background: #3a3a3a;
+    color: #ffffff;
+    border-color: #555555;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .message-bubble {
+    border: 2px solid currentColor;
+  }
+  
+  .chat-input:focus {
+    outline: 3px solid #7b1fa2;
+  }
+}
