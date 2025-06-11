@@ -22,5 +22,5 @@ pip install -r requirements.txt
 cd frontend
 npm install
 npm start
-OPENAI_API_KEY=your-openai-key
+DEEPSEEK_API_KEY=your-openai-key
 
