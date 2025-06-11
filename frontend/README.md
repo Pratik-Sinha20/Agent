@@ -5,7 +5,7 @@ This is a full-stack AI-powered chatbot for booking flights. It includes:
 - 🌐 **Frontend**: React  
 - ⚙️ **Backend**: FastAPI  
 - 🔐 **Auth**: Firebase (Phone Authentication)  
-- 🤖 **LLM**: OpenAI or Perplexity API (configurable)
+- 🤖 **LLM**: DeepSeek(configurable)
 
 ---
 
